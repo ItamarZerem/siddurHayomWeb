@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <script>
@@ -7,31 +7,31 @@
       var saved = localStorage.getItem('siddurLang');
       var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
       var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
-      if (target !== 'he') { location.replace('en/support.html'); }
+      if (target !== 'en') { location.replace('../support.html'); }
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>תמיכה - סידור היום</title>
-  <meta name="description" content="סידור היום הוא פרויקט חינמי לחלוטין. אם תרצו לתמוך בהמשך הפיתוח, כל תרומה מתקבלת בשמחה.">
-  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/support.html">
+  <title>Support - Siddur Hayom</title>
+  <meta name="description" content="Siddur Hayom is a completely free project. If you'd like to support continued development, any donation is warmly welcomed.">
+  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/en/support.html">
   <link rel="alternate" hreflang="he" href="https://itamarzerem.github.io/siddurHayomWeb/support.html">
   <link rel="alternate" hreflang="en" href="https://itamarzerem.github.io/siddurHayomWeb/en/support.html">
   <link rel="alternate" hreflang="x-default" href="https://itamarzerem.github.io/siddurHayomWeb/support.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
   <!-- ── NAV ── -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">סידור היום</a>
+    <a href="index.html" class="nav-logo">Siddur Hayom</a>
     <ul class="nav-links">
-      <li><a href="index.html">בית</a></li>
-      <li><a href="support.html" class="active">תמיכה</a></li>
-      <li><a href="privacy.html">פרטיות</a></li>
-      <li><a href="en/support.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','en')">English</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="support.html" class="active">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="../support.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','he')">עברית</a></li>
     </ul>
   </nav>
 
@@ -40,8 +40,8 @@
     <!-- ── PAGE HEADER ── -->
     <section class="page-header">
       <span class="page-emoji">🤍</span>
-      <h1>תמכו בסידור היום</h1>
-      <p>פרויקט של אהבה - חינמי לכולם</p>
+      <h1>Support Siddur Hayom</h1>
+      <p>A labor of love - free for everyone</p>
     </section>
 
     <!-- ── CONTENT ── -->
@@ -50,53 +50,54 @@
 
         <div class="section-text">
           <p>
-            מאחורי סידור היום עומדים אהבת תורה ורצון עמוק לתת כלי נגיש לכל יהודי -
-            בכל מקום ובכל שעה. כל שורה של קוד, כל נוסח, כל זמן מדויק - נבנו בקפידה ובמחשבה.
+            Behind Siddur Hayom stands a love of Torah and a deep desire to give every Jew an accessible
+            tool - anywhere, anytime. Every line of code, every nusach, every precise time - built with care
+            and thought.
           </p>
           <p>
-            האפליקציה הייתה ותישאר <strong>חינמית לחלוטין</strong>. אין פרסומות. אין מנויים. אין גרסת פרימיום.
+            The app has been and will remain <strong>completely free</strong>. No ads. No subscriptions. No premium tier.
           </p>
           <p>
-            אם האפליקציה מביאה לכם ערך ותרצו לעודד את המשך הפיתוח - כל תרומה, קטנה כגדולה,
-            מתקבלת בשמחה ובאהבה. תודה מכל הלב. 🙏
+            If the app brings you value and you'd like to encourage continued development - any donation,
+            big or small, is received with joy and gratitude. Thank you from the bottom of our heart. 🙏
           </p>
         </div>
 
         <!-- ── DONATE BOX ── -->
         <div class="donate-card">
           <p style="font-size:1.1rem; font-weight:600; color:var(--cream); margin-bottom:0.5rem;">
-            בחרו איך לתרום
+            Choose how to donate
           </p>
           <p style="font-size:0.88rem; margin-bottom:1.5rem;">
-            כל סכום עוזר ומוערך עמוקות
+            Every amount helps and is deeply appreciated
           </p>
 
           <div class="store-buttons">
             <a href="https://www.bitpay.co.il/app/me/43EA566E-8F2C-5676-5928-2BC5A6E4FA832D8C"
                target="_blank" rel="noopener" class="btn btn-bit">
-              💙&ensp;תרמו בביט
+              💙&ensp;Donate via Bit
             </a>
             <a href="https://links.payboxapp.com/Gkv6kfueH4b"
                target="_blank" rel="noopener" class="btn btn-paybox">
-              💚&ensp;תרמו בפייבוקס
+              💚&ensp;Donate via Paybox
             </a>
             <form action="https://www.paypal.com/donate" method="post" target="_blank" style="display:contents;">
               <input type="hidden" name="business" value="itush30@gmail.com">
               <input type="hidden" name="no_recurring" value="0">
               <input type="hidden" name="currency_code" value="ILS">
               <button type="submit" class="btn btn-paypal">
-                💛&ensp;תרמו ב-PayPal
+                💛&ensp;Donate via PayPal
               </button>
             </form>
           </div>
 
-          <p class="donate-amount-note">כל שירות מעביר אתכם לדף/אפליקציה מאובטחים לביצוע התשלום</p>
+          <p class="donate-amount-note">Each option redirects you to a secure page/app to complete the payment</p>
         </div>
 
         <!-- ── CONTACT ── -->
         <p class="contact-note">
-          שאלות? הערות? נשמח לשמוע -
-          <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
+          Questions? Comments? We'd love to hear from you -
+          <a href="mailto:siddurhayom@gmail.com">Contact Us</a>
         </p>
 
       </div>
@@ -107,12 +108,12 @@
   <!-- ── FOOTER ── -->
   <footer>
     <nav class="footer-links">
-      <a href="index.html">בית</a>
-      <a href="support.html">תמיכה</a>
-      <a href="privacy.html">פרטיות</a>
-      <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:siddurhayom@gmail.com">Contact Us</a>
     </nav>
-    <p class="footer-copy">© 2026 Itamar Zerem · כל הזכויות שמורות</p>
+    <p class="footer-copy">© 2026 Itamar Zerem · All rights reserved</p>
   </footer>
 
 </body>

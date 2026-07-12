@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Siddur Hayom</title>
+  <meta name="description" content="Download the Siddur Hayom app — you'll be redirected automatically to the store that matches your device.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Immediate redirect by language, then by device type -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'en') {
+        location.replace('../go.html');
+        return;
+      }
+
+      var PLAY  = "https://play.google.com/store/apps/details?id=com.siddurhayom.app";
+      var APPLE = "https://apps.apple.com/app/id6762453303";
+      var ua = navigator.userAgent || navigator.vendor || window.opera || "";
+
+      // Android
+      if (/android/i.test(ua)) {
+        location.replace(PLAY);
+        return;
+      }
+      // iPhone / iPad / iPod
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        location.replace(APPLE);
+        return;
+      }
+      // iPadOS 13+ reports as Macintosh — detect via touch support
+      if (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) {
+        location.replace(APPLE);
+        return;
+      }
+      // Desktop / unknown — stay and show both buttons below
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Siddur Hayom</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="../go.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','he')">עברית</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <img src="../siddurIcon.png" alt="Siddur Hayom" class="hero-app-icon" width="96" height="96">
+      <h1>Download Siddur Hayom</h1>
+      <p>Choose the store that matches your device</p>
+    </section>
+
+    <section class="section">
+      <div class="container" style="text-align:center;">
+        <div class="store-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.siddurhayom.app"
+             target="_blank" rel="noopener" class="btn btn-play">
+            &#9654;&ensp;Get it on Google Play
+          </a>
+          <a href="https://apps.apple.com/app/id6762453303"
+             target="_blank" rel="noopener" class="btn btn-appstore">
+            &#63743;&ensp;Download on the App Store
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:siddurhayom@gmail.com">Contact Us</a>
+    </nav>
+    <p class="footer-copy">© 2026 Itamar Zerem · All rights reserved</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הורד את סידור היום</title>
+  <meta name="description" content="הורד את אפליקציית סידור היום — מועברים אוטומטית לחנות המתאימה למכשיר שלך.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ניתוב מיידי לפי שפה ואז לפי סוג המכשיר -->
+  <script>
+    (function () {
+      // שפה קודם — אם הביקור צריך לעבור לגרסה האנגלית, לא ממשיכים לניתוב-חנות כאן
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'he') {
+        location.replace('en/go.html');
+        return;
+      }
+
+      var PLAY  = "https://play.google.com/store/apps/details?id=com.siddurhayom.app";
+      var APPLE = "https://apps.apple.com/app/id6762453303";
+      var ua = navigator.userAgent || navigator.vendor || window.opera || "";
+
+      // אנדרואיד
+      if (/android/i.test(ua)) {
+        location.replace(PLAY);
+        return;
+      }
+      // iPhone / iPad / iPod
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        location.replace(APPLE);
+        return;
+      }
+      // iPadOS 13+ מדווח כ‑Macintosh — לזהות לפי מסך מגע
+      if (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) {
+        location.replace(APPLE);
+        return;
+      }
+      // מחשב / לא ידוע — נשארים ומציגים את שני הכפתורים למטה
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">סידור היום</a>
+    <ul class="nav-links">
+      <li><a href="index.html">בית</a></li>
+      <li><a href="support.html">תמיכה</a></li>
+      <li><a href="privacy.html">פרטיות</a></li>
+      <li><a href="en/go.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','en')">English</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <img src="siddurIcon.png" alt="סידור היום" class="hero-app-icon" width="96" height="96">
+      <h1>הורד את סידור היום</h1>
+      <p>בחר את החנות המתאימה למכשיר שלך</p>
+    </section>
+
+    <section class="section">
+      <div class="container" style="text-align:center;">
+        <div class="store-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.siddurhayom.app"
+             target="_blank" rel="noopener" class="btn btn-play">
+            &#9654;&ensp;הורד ב‑Google Play
+          </a>
+          <a href="https://apps.apple.com/app/id6762453303"
+             target="_blank" rel="noopener" class="btn btn-appstore">
+            &#63743;&ensp;הורד ב‑App Store
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <nav class="footer-links">
+      <a href="index.html">בית</a>
+      <a href="support.html">תמיכה</a>
+      <a href="privacy.html">פרטיות</a>
+      <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
+    </nav>
+    <p class="footer-copy">© 2026 Itamar Zerem · כל הזכויות שמורות</p>
+  </footer>
+
+</body>
+</html>

@@ -2,9 +2,21 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'he') { location.replace('en/index.html'); }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>סידור היום - המרכז היומיומי לאורח חיים יהודי</title>
   <meta name="description" content="סידור היום - האפליקציה שמאגדת את כל מה שיהודי צריך ביום יום: סידור לכל נוסח, ספריית יהדות ענקית, זמני היום, שעון מעורר חכם, מניינים ועוד. חינמי לחלוטין.">
+  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/index.html">
+  <link rel="alternate" hreflang="he" href="https://itamarzerem.github.io/siddurHayomWeb/index.html">
+  <link rel="alternate" hreflang="en" href="https://itamarzerem.github.io/siddurHayomWeb/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://itamarzerem.github.io/siddurHayomWeb/index.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -19,6 +31,7 @@
       <li><a href="index.html" class="active">בית</a></li>
       <li><a href="support.html">תמיכה</a></li>
       <li><a href="privacy.html">פרטיות</a></li>
+      <li><a href="en/index.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','en')">English</a></li>
     </ul>
   </nav>
 
@@ -29,8 +42,8 @@
       <img src="siddurIcon.png" alt="סידור היום" class="hero-app-icon" width="96" height="96">
       <h1>סידור היום</h1>
       <p class="hero-tagline">המרכז היומיומי שלך לאורח חיים יהודי מודרני</p>
-      <a href="https://apps.apple.com/app/id6762453303" target="_blank" rel="noopener" class="btn btn-appstore">
-        &#63743;&ensp;הורד ב‑App Store
+      <a href="go.html" class="btn btn-gold">
+        הורד את האפליקציה ←
       </a>
     </section>
 
@@ -120,8 +133,8 @@
 
     <!-- ── CTA ── -->
     <section class="cta-band">
-      <p>זמין עכשיו ב‑App Store, בחינם לחלוטין</p>
-      <a href="https://apps.apple.com/app/id6762453303" target="_blank" rel="noopener" class="btn btn-gold">
+      <p>זמין ל‑iPhone ול‑Android, בחינם לחלוטין</p>
+      <a href="go.html" class="btn btn-gold">
         הורד עכשיו ←
       </a>
     </section>
@@ -133,8 +146,8 @@
     <nav class="footer-links">
       <a href="index.html">בית</a>
       <a href="support.html">תמיכה</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:itush30@gmail.com">צרו קשר</a>
+      <a href="privacy.html">פרטיות</a>
+      <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
     </nav>
     <p class="footer-copy">© 2026 Itamar Zerem · כל הזכויות שמורות</p>
   </footer>

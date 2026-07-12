@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'en') { location.replace('../index.html'); }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddur Hayom - Your Daily Center for Jewish Living</title>
+  <meta name="description" content="Siddur Hayom - the app that brings together everything a Jew needs day to day: a siddur for every nusach, a huge Torah library, accurate daily zmanim, a smart alarm clock, nearby minyanim and more. Completely free.">
+  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/en/index.html">
+  <link rel="alternate" hreflang="he" href="https://itamarzerem.github.io/siddurHayomWeb/index.html">
+  <link rel="alternate" hreflang="en" href="https://itamarzerem.github.io/siddurHayomWeb/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://itamarzerem.github.io/siddurHayomWeb/index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Siddur Hayom</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="../index.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','he')">עברית</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <img src="../siddurIcon.png" alt="Siddur Hayom" class="hero-app-icon" width="96" height="96">
+      <h1>Siddur Hayom</h1>
+      <p class="hero-tagline">Your modern daily center for Jewish living</p>
+      <a href="go.html" class="btn btn-gold">
+        Download the App →
+      </a>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What is Siddur Hayom?</h2>
+        <div class="section-text">
+          <p>
+            Siddur Hayom is your daily center for modern Jewish living, carefully built to accompany you
+            from the moment you wake up until the stars come out.
+          </p>
+          <p>
+            The app brings together everything a Jew needs day to day: a complete siddur for every nusach, a huge
+            Torah library including Tanach, Mishnah, Babylonian Talmud, Rambam, Shulchan Aruch and mussar books,
+            daily learning, precise daily zmanim, a smart alarm clock adapted for Shabbat and holidays, nearby
+            minyanim and more - all completely free, with no ads and no subscriptions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── FEATURES ── -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What you'll find in the app</h2>
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <span class="feature-icon">📖</span>
+            <h3>Prayer Siddur</h3>
+            <p>Shacharit, Mincha, Arvit and more - for every nusach, automatically adapted for Shabbat and holidays</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">⏰</span>
+            <h3>Smart Alarm Clock</h3>
+            <p>An advanced wake-up system adapted for Shabbat and holidays, so you can sleep with peace of mind</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🌅</span>
+            <h3>Daily Zmanim</h3>
+            <p>Precise astronomical calculations based on your location, with reminders so you never miss a prayer</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🕍</span>
+            <h3>Find a Minyan</h3>
+            <p>Search and find minyanim near you at any hour, powered by crowd wisdom</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">📚</span>
+            <h3>Torah Library</h3>
+            <p>Tanach, Mishnah, Babylonian Talmud, Rambam, Shulchan Aruch, Peninei Halacha and books of mussar and chassidut</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🔖</span>
+            <h3>Daily Learning</h3>
+            <p>Daf Yomi, Yerushalmi, Mishnah Yomit, Shnayim Mikra and more - accessible from anywhere</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">📅</span>
+            <h3>Hebrew Calendar</h3>
+            <p>Holidays, weekly parasha and the Omer count with daily reminders and the matching blessing nusach</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🔔</span>
+            <h3>Smart Notifications</h3>
+            <p>Reminders for prayers, Shabbat preparations and keeping your Jewish schedule on track</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">❤️</span>
+            <h3>Completely Free</h3>
+            <p>No ads, no payments, no subscriptions</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-band">
+      <p>Available for iPhone and Android, completely free</p>
+      <a href="go.html" class="btn btn-gold">
+        Download Now →
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:siddurhayom@gmail.com">Contact Us</a>
+    </nav>
+    <p class="footer-copy">© 2026 Itamar Zerem · All rights reserved</p>
+  </footer>
+
+</body>
+</html>

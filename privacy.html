@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'he') { location.replace('en/privacy.html'); }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Siddur Hayom</title>
-  <meta name="description" content="Privacy Policy for Siddur Hayom (סידור היום) mobile application.">
+  <title>מדיניות פרטיות - סידור היום</title>
+  <meta name="description" content="מדיניות הפרטיות של אפליקציית סידור היום.">
+  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/privacy.html">
+  <link rel="alternate" hreflang="he" href="https://itamarzerem.github.io/siddurHayomWeb/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://itamarzerem.github.io/siddurHayomWeb/en/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://itamarzerem.github.io/siddurHayomWeb/privacy.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <!-- Override RTL for this page - nav stays RTL via inline override -->
   <style>
-    html { direction: ltr; }
-    .nav { direction: rtl; }
-    .footer-links { direction: rtl; }
+    .privacy-body { direction: rtl; text-align: right; }
   </style>
 </head>
 <body>
 
-  <!-- ── NAV (RTL) ── -->
+  <!-- ── NAV ── -->
   <nav class="nav">
     <a href="index.html" class="nav-logo">סידור היום</a>
     <ul class="nav-links">
       <li><a href="index.html">בית</a></li>
       <li><a href="support.html">תמיכה</a></li>
       <li><a href="privacy.html" class="active">פרטיות</a></li>
+      <li><a href="en/privacy.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','en')">English</a></li>
     </ul>
   </nav>
 
   <main>
 
     <!-- ── PAGE HEADER ── -->
-    <section class="page-header" style="direction: ltr; text-align: center;">
+    <section class="page-header">
       <span class="page-emoji">🔒</span>
-      <h1>Privacy Policy</h1>
-      <p>Siddur Hayom (סידור היום)</p>
+      <h1>מדיניות פרטיות</h1>
+      <p>סידור היום</p>
     </section>
 
     <!-- ── POLICY BODY ── -->
@@ -42,59 +52,59 @@
       <div class="container">
         <div class="policy-block">
 
-          <span class="last-updated">Last Updated: May 10, 2026</span>
+          <span class="last-updated">עודכן לאחרונה: 10 במאי 2026</span>
 
-          <h2>1. Introduction</h2>
+          <h2>1. מבוא</h2>
           <p>
-            This Privacy Policy explains how Itamar Zerem ("we", "us", or "our") manages information
-            in the Siddur Hayom mobile application. We respect your privacy and are committed to protecting it.
-          </p>
-
-          <h2>2. Information We Collect</h2>
-          <p>
-            <strong style="color: var(--cream);">Account Information:</strong>
-            When you create an account via Firebase (Email/Password), we store your email address
-            and an encrypted password to provide access to your personalized data.
-          </p>
-          <p>
-            <strong style="color: var(--cream);">User Profile:</strong>
-            You may optionally provide a display name.
-          </p>
-          <p>
-            <strong style="color: var(--cream);">User-Generated Content:</strong>
-            We store data regarding synagogues and schedules that you manually add to the app.
-          </p>
-          <p>
-            <strong style="color: var(--cream);">Location Data:</strong>
-            The app may request access to your GPS location only to help you find nearby synagogues.
-            This data is used locally on your device and is not stored on our servers.
+            מדיניות פרטיות זו מסבירה כיצד איתמר זרם ("אנחנו" או "שלנו") מנהל מידע
+            באפליקציית סידור היום. אנו מכבדים את פרטיותכם ומחויבים להגן עליה.
           </p>
 
-          <h2>3. Third-Party Services</h2>
+          <h2>2. המידע שאנו אוספים</h2>
           <p>
-            We use Google Firebase for authentication and data storage. If you choose to sign in
-            using Google or Apple, your information is also subject to their respective privacy policies.
+            <strong style="color: var(--cream);">פרטי חשבון:</strong>
+            כאשר אתם יוצרים חשבון דרך Firebase (אימייל/סיסמה), אנו שומרים את כתובת האימייל שלכם
+            וסיסמה מוצפנת כדי לאפשר גישה למידע האישי שלכם.
           </p>
-          <p>We do not sell your data.</p>
-          <p>We do not use tracking or advertising services.</p>
-
-          <h2>4. Data Retention and Account Deletion</h2>
           <p>
-            We keep your account data as long as your account is active. You have the right to delete
-            your account and all associated data at any time via the "Delete Account" button within
-            the app profile settings.
+            <strong style="color: var(--cream);">פרופיל משתמש:</strong>
+            תוכלו לספק שם תצוגה באופן אופציונלי.
+          </p>
+          <p>
+            <strong style="color: var(--cream);">תוכן שנוצר על-ידי המשתמש:</strong>
+            אנו שומרים מידע לגבי בתי כנסת וזמני תפילה שאתם מוסיפים ידנית לאפליקציה.
+          </p>
+          <p>
+            <strong style="color: var(--cream);">נתוני מיקום:</strong>
+            האפליקציה עשויה לבקש גישה למיקום ה-GPS שלכם רק כדי לעזור לכם למצוא בתי כנסת בקרבתכם.
+            מידע זה משמש באופן מקומי במכשיר שלכם ואינו נשמר בשרתים שלנו.
           </p>
 
-          <h2>5. Children's Privacy</h2>
+          <h2>3. שירותי צד שלישי</h2>
           <p>
-            The app is not intended for children under the age of 13. We do not knowingly collect
-            personal information from children.
+            אנו משתמשים ב-Google Firebase לצורך אימות ואחסון נתונים. אם תבחרו להתחבר
+            באמצעות Google או Apple, המידע שלכם כפוף גם למדיניות הפרטיות שלהם.
+          </p>
+          <p>איננו מוכרים את המידע שלכם.</p>
+          <p>איננו משתמשים בשירותי מעקב או פרסום.</p>
+
+          <h2>4. שמירת נתונים ומחיקת חשבון</h2>
+          <p>
+            אנו שומרים את נתוני החשבון שלכם כל עוד החשבון פעיל. יש לכם את הזכות למחוק
+            את החשבון וכל המידע הקשור אליו בכל עת, דרך כפתור "מחיקת חשבון" בהגדרות
+            הפרופיל באפליקציה.
           </p>
 
-          <h2>6. Contact Us</h2>
+          <h2>5. פרטיות ילדים</h2>
           <p>
-            If you have any questions, please
-            <a href="mailto:itush30@gmail.com">contact us</a>.
+            האפליקציה אינה מיועדת לילדים מתחת לגיל 13. איננו אוספים ביודעין מידע אישי
+            מילדים.
+          </p>
+
+          <h2>6. צרו קשר</h2>
+          <p>
+            אם יש לכם שאלות, אנא
+            <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>.
           </p>
 
         </div>
@@ -108,10 +118,10 @@
     <nav class="footer-links">
       <a href="index.html">בית</a>
       <a href="support.html">תמיכה</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:itush30@gmail.com">צרו קשר</a>
+      <a href="privacy.html">פרטיות</a>
+      <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
     </nav>
-    <p class="footer-copy">© 2026 Itamar Zerem · All rights reserved</p>
+    <p class="footer-copy">© 2026 Itamar Zerem · כל הזכויות שמורות</p>
   </footer>
 
 </body>
