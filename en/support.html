@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <script defer src="../a11y.js"></script>
 </head>
 <body>
 
@@ -31,6 +32,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="support.html" class="active">Support</a></li>
       <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
       <li><a href="../support.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','he')">עברית</a></li>
     </ul>
   </nav>
@@ -39,7 +41,7 @@
 
     <!-- ── PAGE HEADER ── -->
     <section class="page-header">
-      <span class="page-emoji">🤍</span>
+      <span class="page-emoji" aria-hidden="true">🤍</span>
       <h1>Support Siddur Hayom</h1>
       <p>A labor of love - free for everyone</p>
     </section>
@@ -111,6 +113,7 @@
       <a href="index.html">Home</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy Policy</a>
+      <a href="accessibility.html">Accessibility</a>
       <a href="mailto:siddurhayom@gmail.com">Contact Us</a>
     </nav>
     <p class="footer-copy">© 2026 Itamar Zerem · All rights reserved</p>

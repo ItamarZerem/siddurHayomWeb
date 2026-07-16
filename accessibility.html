@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'he') { location.replace('en/accessibility.html'); }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הצהרת נגישות - סידור היום</title>
+  <meta name="description" content="הצהרת הנגישות של אתר סידור היום — עמידה בתקן הישראלי 5568 ברמת AA.">
+  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/accessibility.html">
+  <link rel="alternate" hreflang="he" href="https://itamarzerem.github.io/siddurHayomWeb/accessibility.html">
+  <link rel="alternate" hreflang="en" href="https://itamarzerem.github.io/siddurHayomWeb/en/accessibility.html">
+  <link rel="alternate" hreflang="x-default" href="https://itamarzerem.github.io/siddurHayomWeb/accessibility.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="a11y.js"></script>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">סידור היום</a>
+    <ul class="nav-links">
+      <li><a href="index.html">בית</a></li>
+      <li><a href="support.html">תמיכה</a></li>
+      <li><a href="privacy.html">פרטיות</a></li>
+      <li><a href="accessibility.html" class="active">נגישות</a></li>
+      <li><a href="en/accessibility.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','en')">English</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ── PAGE HEADER ── -->
+    <section class="page-header">
+      <span class="page-emoji" aria-hidden="true">&#9855;</span>
+      <h1>הצהרת נגישות</h1>
+      <p>סידור היום</p>
+    </section>
+
+    <!-- ── STATEMENT BODY ── -->
+    <section class="doc-body">
+      <div class="container">
+        <div class="policy-block">
+
+          <span class="last-updated">עודכן לאחרונה: 13 ביולי 2026</span>
+
+          <h2>1. מחויבות לנגישות</h2>
+          <p>
+            אנו רואים חשיבות רבה במתן שירות שוויוני לכלל המשתמשים ומשקיעים מאמצים כדי
+            שאתר סידור היום יהיה נגיש לאנשים עם מוגבלות, בהתאם לחוק שוויון זכויות לאנשים
+            עם מוגבלות, התשנ"ח-1998, ולתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות
+            לשירות), התשע"ג-2013.
+          </p>
+
+          <h2>2. רמת הנגישות באתר</h2>
+          <p>
+            האתר נבנה בהתאם להוראות התקן הישראלי (ת"י 5568) לנגישות תכנים באינטרנט, ברמת
+            הנגישות AA, המבוסס על הנחיות הנגישות הבינלאומיות
+            <span dir="ltr">WCAG 2.0</span>.
+          </p>
+
+          <h2>3. מה בוצע באתר</h2>
+          <ul>
+            <li>מבנה עמוד סמנטי ותקין המותאם לקוראי מסך.</li>
+            <li>ניווט מלא באמצעות מקלדת (מקש <span dir="ltr">Tab</span>) עם חיווי פוקוס ברור.</li>
+            <li>קישור "דילוג לתוכן" לדילוג ישיר על תפריט הניווט.</li>
+            <li>טקסט חלופי (<span dir="ltr">alt</span>) לתמונות משמעותיות.</li>
+            <li>ניגודיות צבעים תואמת-תקן בין הטקסט לרקע.</li>
+            <li>תמיכה מלאה בכיווניות ימין-לשמאל (עברית) ובהגדלת טקסט.</li>
+            <li>
+              כלי נגישות ייעודי (הכפתור בפינת המסך) המאפשר: הגדלת והקטנת גודל הטקסט,
+              מצב ניגודיות גבוהה, הדגשת קישורים ועצירת אנימציות.
+            </li>
+          </ul>
+
+          <h2>4. מגבלות ידועות</h2>
+          <p>
+            חלק מהתכנים באתר מסתמכים על שירותי צד שלישי (כגון גופנים חיצוניים וקישורים
+            לחנויות האפליקציות ולשירותי תרומה) שאינם בשליטתנו המלאה. אנו פועלים לשפר את
+            נגישות האתר באופן שוטף. אם נתקלתם ברכיב שאינו נגיש — נשמח שתעדכנו אותנו ונטפל בכך.
+          </p>
+
+          <h2>5. פרטי רכז הנגישות</h2>
+          <p>
+            בכל שאלה, בקשה או דיווח על בעיית נגישות, ניתן לפנות אל רכז הנגישות:
+          </p>
+          <p>
+            <strong style="color: var(--cream);">שם:</strong> איתמר זרם<br>
+            <!-- אם יש טלפון לרכז הנגישות, הוסף כאן שורת "טלפון:" -->
+            <strong style="color: var(--cream);">דוא"ל:</strong>
+            <a href="mailto:siddurhayom@gmail.com">siddurhayom@gmail.com</a>
+          </p>
+          <p>
+            נשתדל להשיב לכל פנייה בהקדם האפשרי ולתקן ליקויי נגישות שיובאו לידיעתנו.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <nav class="footer-links">
+      <a href="index.html">בית</a>
+      <a href="support.html">תמיכה</a>
+      <a href="privacy.html">פרטיות</a>
+      <a href="accessibility.html">נגישות</a>
+      <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
+    </nav>
+    <p class="footer-copy">© 2026 Itamar Zerem · כל הזכויות שמורות</p>
+  </footer>
+
+</body>
+</html>

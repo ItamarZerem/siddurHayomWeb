@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('siddurLang');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      var target = saved || (lang.indexOf('he') === 0 ? 'he' : 'en');
+      if (target !== 'en') { location.replace('../accessibility.html'); }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement - Siddur Hayom</title>
+  <meta name="description" content="Accessibility statement for the Siddur Hayom website — conformance with Israeli Standard 5568 (WCAG 2.0) level AA.">
+  <link rel="canonical" href="https://itamarzerem.github.io/siddurHayomWeb/en/accessibility.html">
+  <link rel="alternate" hreflang="he" href="https://itamarzerem.github.io/siddurHayomWeb/accessibility.html">
+  <link rel="alternate" hreflang="en" href="https://itamarzerem.github.io/siddurHayomWeb/en/accessibility.html">
+  <link rel="alternate" hreflang="x-default" href="https://itamarzerem.github.io/siddurHayomWeb/accessibility.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script defer src="../a11y.js"></script>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Siddur Hayom</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="accessibility.html" class="active">Accessibility</a></li>
+      <li><a href="../accessibility.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','he')">עברית</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ── PAGE HEADER ── -->
+    <section class="page-header">
+      <span class="page-emoji" aria-hidden="true">&#9855;</span>
+      <h1>Accessibility Statement</h1>
+      <p>Siddur Hayom (סידור היום)</p>
+    </section>
+
+    <!-- ── STATEMENT BODY ── -->
+    <section class="doc-body">
+      <div class="container">
+        <div class="policy-block">
+
+          <span class="last-updated">Last Updated: July 13, 2026</span>
+
+          <h2>1. Our Commitment</h2>
+          <p>
+            We believe in providing an equal service to all users and invest ongoing effort to make
+            the Siddur Hayom website accessible to people with disabilities, in accordance with the
+            Israeli Equal Rights for Persons with Disabilities Law (1998) and its Accessibility of
+            Service Regulations (2013).
+          </p>
+
+          <h2>2. Conformance Level</h2>
+          <p>
+            The website was built to conform with the Israeli Standard for web content accessibility
+            (IS 5568) at level AA, which is based on the international
+            <span dir="ltr">WCAG 2.0</span> guidelines.
+          </p>
+
+          <h2>3. What Has Been Done</h2>
+          <ul>
+            <li>Semantic, well-structured markup suited for screen readers.</li>
+            <li>Full keyboard navigation (<span dir="ltr">Tab</span> key) with a clear focus indicator.</li>
+            <li>A "skip to content" link that bypasses the navigation menu.</li>
+            <li>Alternative text (<span dir="ltr">alt</span>) for meaningful images.</li>
+            <li>Standard-compliant color contrast between text and background.</li>
+            <li>Full right-to-left (Hebrew) support and resizable text.</li>
+            <li>
+              A dedicated accessibility tool (the button in the corner of the screen) that allows:
+              increasing and decreasing text size, a high-contrast mode, link highlighting and
+              stopping animations.
+            </li>
+          </ul>
+
+          <h2>4. Known Limitations</h2>
+          <p>
+            Some content relies on third-party services (such as external fonts and links to the
+            app stores and donation services) that are not fully under our control. We continuously
+            work to improve the website's accessibility. If you encounter a component that is not
+            accessible, please let us know and we will address it.
+          </p>
+
+          <h2>5. Accessibility Coordinator</h2>
+          <p>
+            For any question, request or report of an accessibility issue, you may contact the
+            accessibility coordinator:
+          </p>
+          <p>
+            <strong style="color: var(--cream);">Name:</strong> Itamar Zerem<br>
+            <!-- If a phone number for the coordinator exists, add a "Phone:" line here -->
+            <strong style="color: var(--cream);">Email:</strong>
+            <a href="mailto:siddurhayom@gmail.com">siddurhayom@gmail.com</a>
+          </p>
+          <p>
+            We will do our best to respond to every inquiry promptly and to fix any accessibility
+            issues brought to our attention.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="mailto:siddurhayom@gmail.com">Contact Us</a>
+    </nav>
+    <p class="footer-copy">© 2026 Itamar Zerem · All rights reserved</p>
+  </footer>
+
+</body>
+</html>

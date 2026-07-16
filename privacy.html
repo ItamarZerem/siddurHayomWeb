@@ -24,6 +24,7 @@
   <style>
     .privacy-body { direction: rtl; text-align: right; }
   </style>
+  <script defer src="a11y.js"></script>
 </head>
 <body>
 
@@ -34,6 +35,7 @@
       <li><a href="index.html">בית</a></li>
       <li><a href="support.html">תמיכה</a></li>
       <li><a href="privacy.html" class="active">פרטיות</a></li>
+      <li><a href="accessibility.html">נגישות</a></li>
       <li><a href="en/privacy.html" class="lang-switch" onclick="localStorage.setItem('siddurLang','en')">English</a></li>
     </ul>
   </nav>
@@ -42,7 +44,7 @@
 
     <!-- ── PAGE HEADER ── -->
     <section class="page-header">
-      <span class="page-emoji">🔒</span>
+      <span class="page-emoji" aria-hidden="true">🔒</span>
       <h1>מדיניות פרטיות</h1>
       <p>סידור היום</p>
     </section>
@@ -119,6 +121,7 @@
       <a href="index.html">בית</a>
       <a href="support.html">תמיכה</a>
       <a href="privacy.html">פרטיות</a>
+      <a href="accessibility.html">נגישות</a>
       <a href="mailto:siddurhayom@gmail.com">צרו קשר</a>
     </nav>
     <p class="footer-copy">© 2026 Itamar Zerem · כל הזכויות שמורות</p>

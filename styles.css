@@ -431,11 +431,11 @@ main { flex: 1; }
   margin-bottom: 0.6rem;
 }
 
-.privacy-body .last-updated {
+.privacy-body .last-updated,
+.doc-body .last-updated {
   display: block;
   font-size: 0.8rem;
   color: var(--muted);
-  opacity: 0.7;
   margin-bottom: 1.5rem;
 }
 
@@ -474,7 +474,6 @@ footer {
 .footer-copy {
   font-size: 0.76rem;
   color: var(--muted);
-  opacity: 0.55;
 }
 
 
@@ -498,4 +497,224 @@ footer {
   .features-grid { grid-template-columns: 1fr; }
   .nav-links { gap: 0.85rem; }
   .nav-links a { font-size: 0.82rem; }
+}
+
+
+/* ===================================================
+   נגישות — Accessibility (ת"י 5568 AA)
+   =================================================== */
+
+/* ─── חיווי פוקוס למקלדת (keyboard focus) ─────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--gold-lt);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* דפדפנים שאינם תומכים ב-:focus-visible — לא להסתיר פוקוס */
+a:focus,
+button:focus,
+input:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--gold-lt);
+  outline-offset: 3px;
+}
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── דילוג לתוכן (skip link) ───────────────────── */
+.skip-link {
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: -100px;
+  z-index: 1000;
+  background: var(--gold);
+  color: var(--bg-deep);
+  padding: 0.7rem 1.2rem;
+  border-radius: 0 0 10px 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+#main:focus {
+  outline: none;
+}
+
+/* ─── עמוד מסמך כללי (הצהרת נגישות / RTL+LTR) ────── */
+.doc-body {
+  padding: 3rem 0;
+  text-align: start;
+}
+.doc-body .policy-block {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-bdr);
+  border-radius: var(--radius);
+  padding: 2rem 2rem 1.5rem;
+}
+.doc-body h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 1.5rem;
+  margin-bottom: 0.45rem;
+}
+.doc-body h2:first-of-type { margin-top: 0; }
+.doc-body p,
+.doc-body li {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin-bottom: 0.6rem;
+}
+.doc-body ul {
+  list-style: disc;
+  padding-inline-start: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+.doc-body a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(201, 168, 76, 0.5);
+}
+
+/* ─── וידג'ט נגישות (accessibility toolbar) ──────── */
+.a11y-toggle {
+  position: fixed;
+  inset-inline-start: 1rem;
+  bottom: 1rem;
+  z-index: 900;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--bg-deep);
+  color: var(--gold);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.a11y-toggle:hover {
+  transform: scale(1.06);
+  background: var(--bg);
+}
+
+.a11y-panel {
+  position: fixed;
+  inset-inline-start: 1rem;
+  bottom: 4.6rem;
+  z-index: 901;
+  width: 250px;
+  max-width: calc(100vw - 2rem);
+  background: var(--bg-deep);
+  border: 1px solid var(--gold-bdr);
+  border-radius: 14px;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.55);
+  padding: 1rem;
+  text-align: start;
+}
+.a11y-panel[hidden] { display: none; }
+
+.a11y-panel h2 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+
+.a11y-panel button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: start;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-bdr);
+  border-radius: 10px;
+  color: var(--cream);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 0.45rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.a11y-panel button:hover {
+  border-color: var(--gold);
+}
+.a11y-panel button[aria-pressed="true"] {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.18);
+  color: var(--gold-lt);
+}
+.a11y-panel .a11y-icn {
+  font-size: 1.05rem;
+  width: 1.4rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.a11y-panel .a11y-reset {
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  justify-content: center;
+  color: var(--muted);
+}
+
+/* ─── מצב ניגודיות גבוהה (high contrast) ─────────── */
+body.a11y-contrast {
+  --bg:       #000914;
+  --bg-deep:  #000000;
+  --bg-card:  rgba(255, 255, 255, 0.10);
+  --cream:    #ffffff;
+  --muted:    #e9edf5;
+  --gold:     #ffd24a;
+  --gold-lt:  #ffe07a;
+  --gold-bdr: rgba(255, 210, 74, 0.55);
+}
+body.a11y-contrast .feature-card p,
+body.a11y-contrast .privacy-body p,
+body.a11y-contrast .doc-body p,
+body.a11y-contrast .section-text p {
+  color: var(--cream);
+}
+
+/* ─── הדגשת קישורים (underline links) ────────────── */
+body.a11y-underline a:not(.btn):not(.nav-logo) {
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+/* ─── עצירת אנימציות (stop animations) ───────────── */
+body.a11y-no-anim *,
+body.a11y-no-anim *::before,
+body.a11y-no-anim *::after {
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001s !important;
+  scroll-behavior: auto !important;
+}
+
+/* כיבוד העדפת מערכת: תנועה מופחתת */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
 }
