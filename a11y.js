@@ -143,8 +143,18 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !panel.hidden) closePanel(true);
     });
+    /* ‏סגירה בלחיצה מחוץ לפאנל.
+       ‏🔴 המבחן הוא `toggle.contains(e.target)` ולא `e.target !== toggle`, וזה
+       ‏מה שהיה שבור עד 26.8.26: הכפתור מכיל `<span>` עם הגליף, ולכן לחיצה על
+       ‏האייקון עצמו מחזירה `e.target` שהוא ה-span ולא הכפתור. הרצף היה: המאזין
+       ‏של הכפתור פותח את הפאנל, אותו אירוע ממשיך לבעבע ל-`document`, התנאי
+       ‏`e.target !== toggle` מתקיים (span אינו הכפתור) והפאנל נסגר באותה לחיצה.
+       ‏התוצאה: במחשב הפאנל לא נפתח אף פעם, כי עכבר מכוון למרכז הכפתור שהוא
+       ‏הגליף; בנייד הוא נפתח אחת לכמה נסיונות, כשאצבע נחתה על שולי העיגול
+       ‏מחוץ לגליף. `contains` מחזיר true גם עבור הצומת עצמו, ולכן הוא מכסה את
+       ‏שני המקרים. */
     document.addEventListener('click', function (e) {
-      if (!panel.hidden && !panel.contains(e.target) && e.target !== toggle) closePanel(false);
+      if (!panel.hidden && !panel.contains(e.target) && !toggle.contains(e.target)) closePanel(false);
     });
 
     document.body.appendChild(toggle);
