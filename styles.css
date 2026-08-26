@@ -424,10 +424,28 @@ main { flex: 1; }
   margin-top: 0;
 }
 
-.privacy-body p {
+/* ‏`li` נוסף כאן ב-26.8.26 יחד עם כתיבת המדיניות מחדש: רשימת שירותי צד שלישי
+   ‏נקראת כרשימה ולא כפסקה רצה. עד אז היו פריטי-רשימה מעוצבים רק ב-`.doc-body`
+   ‏(דף הנגישות), ולכן `ul` בעמוד הפרטיות היה יוצא בלי צבע ובלי ריווח. */
+.privacy-body p,
+.privacy-body li {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.8;
+  margin-bottom: 0.6rem;
+}
+
+/* ‏תווית מודגשת בראש פסקה ("פרטי חשבון:"). עד 26.8.26 הצבע היה כתוב ישירות על
+   ‏כל `<strong>` כ-`style="color: var(--cream)"`; הועבר לכאן כדי שלא יחזור על
+   ‏עצמו בעשרות מקומות בשני הדפים, העברי והאנגלי. */
+.privacy-body strong {
+  color: var(--cream);
+}
+
+.privacy-body ul {
+  list-style: disc;
+  /* ‏לוגי ולא `padding-right`: אותו קובץ CSS משרת גם את הדפים באנגלית ב-`en/`. */
+  padding-inline-start: 1.4rem;
   margin-bottom: 0.6rem;
 }
 

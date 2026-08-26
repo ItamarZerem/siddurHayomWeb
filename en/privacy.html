@@ -51,58 +51,140 @@
       <div class="container">
         <div class="policy-block">
 
-          <span class="last-updated">Last Updated: May 10, 2026</span>
+          <span class="last-updated">Last Updated: August 26, 2026</span>
 
           <h2>1. Introduction</h2>
           <p>
-            This Privacy Policy explains how Itamar Zerem ("we", "us", or "our") manages information
-            in the Siddur Hayom mobile application. We respect your privacy and are committed to protecting it.
+            This Privacy Policy explains how Itamar Zerem ("we", "us", or "our") manages
+            information in the Siddur Hayom app, on both Android and iPhone. We respect
+            your privacy and are committed to protecting it.
+          </p>
+          <p>
+            Our guiding principle is simple: the app exists to serve you day to day, not to
+            collect information about you. Most of what the app does &mdash; zmanim, the
+            Hebrew calendar, the siddur and the library &mdash; is computed and stored on
+            your device alone.
           </p>
 
           <h2>2. Information We Collect</h2>
           <p>
-            <strong style="color: var(--cream);">Account Information:</strong>
-            When you create an account via Firebase (Email/Password), we store your email address
-            and an encrypted password to provide access to your personalized data.
+            <strong>Account details (optional):</strong>
+            An account is required only if you choose to contribute to the synagogue and
+            minyan database. If you register with an email and password, we store your email
+            address and an encrypted password through Firebase Authentication. If you sign in
+            with Google or Apple, we receive only your email address and display name from
+            them. Every other part of the app works without an account.
           </p>
           <p>
-            <strong style="color: var(--cream);">User Profile:</strong>
-            You may optionally provide a display name.
+            <strong>User profile:</strong>
+            A display name, optionally.
           </p>
           <p>
-            <strong style="color: var(--cream);">User-Generated Content:</strong>
-            We store data regarding synagogues and schedules that you manually add to the app.
+            <strong>User-generated content:</strong>
+            Synagogues, prayer times and correction reports you add to the database, including
+            any photos you attach. This information is shown to all users of the app, so please
+            do not include personal details in it.
           </p>
           <p>
-            <strong style="color: var(--cream);">Location Data:</strong>
-            The app may request access to your GPS location only to help you find nearby synagogues.
-            This data is used locally on your device and is not stored on our servers.
+            <strong>Support requests:</strong>
+            When you send us a message from within the app, we store the message text, your
+            name and email address if you provided them, up to three attached photos, your
+            platform (Android or iPhone), the app version, and your device's notification
+            token &mdash; so that we can reply to you personally. The conversation is kept so
+            that you can see it under "My Requests".
+          </p>
+          <p>
+            <strong>Location data:</strong>
+            The app requests location access in order to compute zmanim for where you are, and
+            to show synagogues near you. The computation itself happens on your device, and we
+            do not store your location on our servers. However, in order to translate
+            coordinates into a place name and to display a map, those coordinates are sent to
+            the OpenStreetMap mapping service. You can decline the location permission and
+            choose a city manually instead.
+          </p>
+          <p>
+            <strong>What we do not collect:</strong>
+            We do not collect device identifiers, device models or operating-system versions.
+            The app contains no analytics, tracking, advertising or crash-reporting services.
+            We do not sell your information and we do not share it with advertisers.
           </p>
 
-          <h2>3. Third-Party Services</h2>
+          <h2>3. Notifications</h2>
           <p>
-            We use Google Firebase for authentication and data storage. If you choose to sign in
-            using Google or Apple, your information is also subject to their respective privacy policies.
-          </p>
-          <p>We do not sell your data.</p>
-          <p>We do not use tracking or advertising services.</p>
-
-          <h2>4. Data Retention and Account Deletion</h2>
-          <p>
-            We keep your account data as long as your account is active. You have the right to delete
-            your account and all associated data at any time via the "Delete Account" button within
-            the app profile settings.
+            Most notifications in the app &mdash; zmanim, reminders, daily study and alarms
+            &mdash; are scheduled and delivered on your device, with no server involved and
+            without our knowing about them. Notifications sent by us, such as a reply to your
+            support request or a general announcement, go through Firebase Cloud Messaging and
+            require your device's notification token. You can revoke the permission at any
+            time in your device settings.
           </p>
 
-          <h2>5. Children's Privacy</h2>
+          <h2>4. Third-Party Services</h2>
           <p>
-            The app is not intended for children under the age of 13. We do not knowingly collect
-            personal information from children.
+            The app relies on the following services, each with its own privacy policy:
+          </p>
+          <ul>
+            <li><strong>Google Firebase</strong> &mdash; user authentication, the synagogue and support-request database, and notification delivery.</li>
+            <li><strong>Google and Apple</strong> &mdash; only if you chose to sign in with them.</li>
+            <li><strong>Cloudinary</strong> &mdash; hosting for photos attached to support requests and synagogues.</li>
+            <li><strong>Telegram</strong> &mdash; support requests and our replies are relayed to us through a private Telegram bot, so that we can respond quickly.</li>
+            <li><strong>OpenStreetMap</strong> &mdash; translating coordinates into place names, address search and map display.</li>
+            <li><strong>Sefaria</strong> &mdash; fetching texts and commentaries in the library and in study mode.</li>
+            <li><strong>shas.org</strong> &mdash; displaying the classic Talmud page layout.</li>
+          </ul>
+          <p>
+            The text and map services receive only what the request itself requires &mdash;
+            for example a book and page reference, or a set of coordinates &mdash; and not
+            your identity.
+          </p>
+          <p>
+            When you choose to navigate to a synagogue, the app opens the navigation app on
+            your device (Google Maps or Waze) with the destination. From that point on, that
+            app's privacy policy applies to you.
           </p>
 
-          <h2>6. Contact Us</h2>
+          <h2>5. Data Retention and Deletion</h2>
           <p>
-            If you have any questions, please
+            We keep your account data for as long as the account is active. You have the right
+            to delete your account and all information associated with it at any time, using
+            the "Delete Account" button in the app's profile settings.
+          </p>
+          <p>
+            Content you contributed to the synagogue database is meant to serve all users, and
+            may therefore remain in the database after your account is deleted, no longer
+            linked to you.
+          </p>
+          <p>
+            A photo you uploaded is stored with our image-hosting provider. Removing the photo
+            from within the app removes it from display, but the copy held by the provider is
+            not deleted automatically. If you would like a photo deleted entirely, please
+            <a href="mailto:siddurhayom@gmail.com">contact us</a> and we will do so.
+          </p>
+
+          <h2>6. Your Rights</h2>
+          <p>
+            You have the right to know what information about you we hold, to review it, to
+            request its correction and to request its deletion. Most of these actions are
+            available directly in the app; for anything else, please
+            <a href="mailto:siddurhayom@gmail.com">contact us</a> and we will handle your
+            request promptly.
+          </p>
+
+          <h2>7. Children's Privacy</h2>
+          <p>
+            The app is not intended for children under the age of 13. We do not knowingly
+            collect personal information from children.
+          </p>
+
+          <h2>8. Changes to This Policy</h2>
+          <p>
+            If we update this policy, we will also update the "Last Updated" date at the top
+            of this page.
+          </p>
+
+          <h2>9. Contact Us</h2>
+          <p>
+            For any privacy-related question, please
             <a href="mailto:siddurhayom@gmail.com">contact us</a>.
           </p>
 
