@@ -51,7 +51,7 @@
       <div class="container">
         <div class="policy-block">
 
-          <span class="last-updated">Last Updated: August 31, 2026</span>
+          <span class="last-updated">Last Updated: October 20, 2026</span>
 
           <h2>1. Introduction</h2>
           <p>
@@ -92,6 +92,13 @@
             of your prayers, books or searches.
           </p>
           <p>
+            <strong>Synagogue gabbaim:</strong>
+            A request to manage a synagogue stores the name, email address, phone number and
+            signed declaration, solely to approve the request. Once approved, the gabbai chooses
+            whether to show the phone number on the synagogue page, and if so, it is visible to
+            all app users.
+          </p>
+          <p>
             <strong>User-generated content:</strong>
             Synagogues, prayer times and correction reports you add to the database, including
             any photos you attach. This information is shown to all users of the app, so please
@@ -109,7 +116,10 @@
             <strong>Location data:</strong>
             The app requests location access in order to compute zmanim for where you are, and
             to show synagogues near you. The computation itself happens on your device, and we
-            do not store your location on our servers. However, in order to translate
+            do not store your location on our servers, except for a "Minyan needs people" call
+            sent from "Current location": while the call is open, its exact location is stored
+            with the sender's account ID and is visible to all app users, and once it closes the
+            location is deleted from our servers by the next day. However, in order to translate
             coordinates into a place name and to display a map, those coordinates are sent to
             the OpenStreetMap mapping service. You can decline the location permission and
             choose a city manually instead.
@@ -149,7 +159,7 @@
             &mdash; are scheduled and delivered on your device, with no server involved and
             without our knowing about them. Notifications sent by us, such as a reply to your
             support request or a general announcement, go through Firebase Cloud Messaging and
-            require your device's notification token. You can revoke the permission at any
+            require your device's notification token. Turning on "Alerts in my area" subscribes the device to a notification topic for an area of about five kilometers; the area is determined on the device, and the exact location is not sent. You can revoke the permission at any
             time in your device settings.
           </p>
 
