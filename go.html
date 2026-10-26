@@ -28,9 +28,13 @@
       var APPLE = "https://apps.apple.com/app/id6762453303";
       var ua = navigator.userAgent || navigator.vendor || window.opera || "";
 
-      // אנדרואיד
+      // אנדרואיד → העמוד /open של סידור היום (26.10.2026, הכרעת איתמר). ‏did.li/siddurHayom מפנה לכאן, וממשק did.li
+      // ‏נפל באותו יום, אז במקום להחליף את היעד שם מחליפים אותו כאן. ‏/open פותח את האפליקציה למי שהתקין את בילד 20
+      // ‏(App Link או intent://), ומי שאין לו - או שיש לו גרסה ישנה - מגיע ל-Google Play כמו עד היום (נפילה של ה-intent,
+      // ‏ורשת ביטחון של 2 שנ' בעמוד עצמו). ‏אייפון ומחשב: בלי שינוי, ישר לחנות / שני הכפתורים.
+      // ‏לחזרה למצב הקודם: location.replace(PLAY).
       if (/android/i.test(ua)) {
-        location.replace(PLAY);
+        location.replace("https://siddurhayom.web.app/open");
         return;
       }
       // iPhone / iPad / iPod
