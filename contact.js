@@ -20,7 +20,7 @@
   var T = he ? {
     title: 'צרו קשר',
     lead: 'אפשר לכתוב לנו לכתובת:',
-    app: 'אפשר לפנות אלינו גם מתוך האפליקציה, ב״פנייה ומשוב״ שבמסך ההגדרות, והתשובה תגיע לשם.',
+    app: 'אפשר לפנות אלינו גם מתוך האפליקציה, ב״פנייה ומשוב״ שבמסך ההגדרות.',
     copy: 'העתקת הכתובת',
     copied: 'הכתובת הועתקה',
     open: 'פתיחה באפליקציית הדוא״ל',
@@ -28,7 +28,7 @@
   } : {
     title: 'Contact Us',
     lead: 'You can write to us at:',
-    app: 'You can also reach us from inside the app, under "Feedback" in Settings, and the reply will arrive there.',
+    app: 'You can also reach us from inside the app, under "Feedback" in Settings.',
     copy: 'Copy address',
     copied: 'Address copied',
     open: 'Open in your email app',
