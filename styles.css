@@ -75,6 +75,7 @@ ul { list-style: none; }
 }
 
 .nav-links a {
+  white-space: nowrap; /* ‏«Contact» / «צרו קשר» בסרגל (26.11.26) לא נשברים לשתי שורות */
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--muted);
@@ -525,6 +526,12 @@ footer {
     justify-content: space-between;
     gap: 0.6rem;
   }
+
+  /* ‏26.11.26 נוסף «צרו קשר» / «Contact» לסרגל (בקשת אורי), שישה פריטים במקום
+     ‏חמישה. ‏בגודל הקודם בורר השפה נחתך בקצה המסך באנגלית, גם ב-390 וגם ב-360. */
+  .nav { padding-left: 0.9rem; padding-right: 0.9rem; }
+  .nav-links a { font-size: 0.8rem; }
+  .lang-switch { padding: 0.2rem 0.55rem; }
 }
 
 @media (max-width: 380px) {
@@ -751,4 +758,53 @@ body.a11y-no-anim *::after {
     transition-duration: 0.001s !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ── חלון «צרו קשר» (contact.js, 26.11.2026) ──
+   ‏במקום mailto: ישיר שיצא מהאתר ופתח את Gmail (בקשת אורי). */
+.contact-dialog {
+  width: min(92vw, 420px);
+  margin: auto;
+  padding: 1.75rem 1.5rem 1.25rem;
+  border: 1px solid var(--gold-bdr);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--cream);
+  text-align: center;
+  font-family: inherit;
+}
+.contact-dialog::backdrop { background: rgba(8, 14, 28, 0.72); }
+.contact-dialog h2 {
+  color: var(--gold);
+  font-size: 1.3rem;
+  margin-bottom: 0.9rem;
+}
+.contact-dialog p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+.contact-dialog .contact-email {
+  margin: 0.35rem 0 1rem;
+  color: var(--cream);
+  font-size: 1.05rem;
+  font-weight: 600;
+  user-select: all;
+}
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+.contact-copy {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold-bdr);
+}
+.contact-close {
+  margin-top: 0.9rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
 }
