@@ -17,7 +17,7 @@
 // ‏אותות פרסום כבויים תמיד (ad_* denied, ‏google signals כבוי), ‏כי המדיניות אומרת
 // ‏שהנתונים אינם משמשים לפרסום.
 (function () {
-  var MEASUREMENT_ID = '';
+  var MEASUREMENT_ID = 'G-CDGGDHCENP';
   if (!MEASUREMENT_ID) { return; }
 
   var dnt = navigator.doNotTrack === '1' || window.doNotTrack === '1' ||
